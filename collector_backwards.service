@@ -1,0 +1,7 @@
+[Unit]
+Description=Collector backwards data of alog and inserted in datalab
+
+[Service]
+Type=idle
+ExecStart=/diska/vlt/anaconda3/bin/python3.6 /vlt/collector/collector.py backwards -es_server "134.171.189.10:9200" "134.171.189.11:9200" "134.171.189.12:9200" "134.171.189.13:9200"
+Restart=always
